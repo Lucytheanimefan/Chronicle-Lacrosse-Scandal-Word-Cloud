@@ -17,7 +17,7 @@ def getFrequency(words):
     return wordFreq
 
 text=open('DukeStatementsAllText.txt')
-allText=text.read().replace(',','').replace('(','').replace('.','')
+allText=text.read().replace(',','').replace('(','').replace('.','').replace(')','').replace('"','').replace(';','').replace(':','').replace('?','')
 textArray=allText.split()
 getFrequency(allText.split())
 print wordFreq
