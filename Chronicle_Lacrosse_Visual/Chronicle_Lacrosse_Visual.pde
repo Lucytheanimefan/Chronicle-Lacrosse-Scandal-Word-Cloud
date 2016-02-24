@@ -2,7 +2,7 @@ color[] palette={#122661,#281262,#8F7B0D,#8F660D,#8696C5};
 String[] trigger={"rape","raped","lacrosse","brodhead","accusation","sickening","misconduct",
 "sexual","toleration","Duke","deliberate","allegations","suspension","team","conduct","charges", 
 "student","mistake","guilty","investigation","behavior","report","attorney","innocent","athletic","evidence"
-,"report","reports"};
+,"report","reports","university"};
 int x;
 int y;
 int i=0;
