@@ -37,7 +37,7 @@ void draw(){
         fill(palette[col]);
       }else fill(palette[4]);
     }
-    if (Integer.parseInt(nums[i])>80){
+    if (Integer.parseInt(nums[i])>80 || count!=0 ){
       textSize(100);
     }else{
     textSize(Integer.parseInt(nums[i]));
