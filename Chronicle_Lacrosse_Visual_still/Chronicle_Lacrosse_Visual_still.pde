@@ -71,18 +71,7 @@ void draw(){
     background(palette[0]);
     drawTrigButton();
     drawNormButton();
-    
-    println(trigs.size());
-    for (int i=0; i<trigs.size(); i++){
-      drawTrigButton();
-      drawNormButton();
-      fill(0);
-      x=(int)random(50,750);
-      y=(int)random(50,700);
-      textSize(trigCount.get(i));
-      text(trigs.get(i),x,y);
-      delay(2);
-  }
+    triggerHover();
 }else if(mouseX>25 && mouseX<75 && mouseY>100 && mouseY<150){ 
     setup();
     drawTrigButton();
@@ -99,9 +88,21 @@ void drawTrigButton(){
 }
 
 void drawNormButton(){
-  fill(0);
+    fill(0);
     rect(25, 100, 50, 50);
     fill(255);
     textSize(10);
     text("All words",28,130);
+}
+
+void triggerHover(){
+  background(palette[0]);
+  for (int i=0; i<trigs.size(); i++){
+      fill(0);
+      x=(int)random(50,750);
+      y=(int)random(50,700);
+      textSize(trigCount.get(i));
+      text(trigs.get(i),x,y);
+      delay(2);
+  }
 }
