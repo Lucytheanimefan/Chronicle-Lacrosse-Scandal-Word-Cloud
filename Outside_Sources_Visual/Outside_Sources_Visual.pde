@@ -2,10 +2,12 @@ color[] palette={#122661,#281262,#8F7B0D,#8F660D,#8696C5,0};
 String[] trigger={"rape","raped","lacrosse","brodhead","accusation","sickening","misconduct",
 "sexual","toleration","Duke","deliberate","allegations","suspension","team","conduct","charges", 
 "student","mistake","guilty","investigation","behavior","report","attorney","innocent","athletic","evidence"
-,"report","reports","university"};
+,"university"};
 int x;
 int y;
 int i=0;
+int j=0;
+int k=0;
 
 void setup(){
   size(1000,800);
@@ -13,8 +15,8 @@ void setup(){
 }
 
 void draw(){
-  String words[]=loadStrings("filteredWords.txt");
-  String nums[]=loadStrings("filteredNums.txt");
+  String words[]=loadStrings("filteredOutsWords.txt");
+  String nums[]=loadStrings("filteredOutsNums.txt");
   //for (int i=0;i<words.length;i++){
     x=(int)random(100,800);
     y=(int)random(50,700);
@@ -30,16 +32,17 @@ void draw(){
         count++;
       }
     }
-    if (col!=0){
+    
+      if (col!=0){
         fill(palette[col]);
       }else fill(palette[4]);
-    //if (Integer.parseInt(nums[i])>80 || count!=0 ){
-    //  textSize(100);
-    //}else{
-     if (Integer.parseInt(nums[i])>100 || count!=0 ){
+    
+    if (Integer.parseInt(nums[i])>100 || count!=0 ){
       textSize(50);
     }
-    else {textSize(Integer.parseInt(nums[i]));}
+    else if (Integer.parseInt(nums[i])<40){
+      textSize(Integer.parseInt(nums[i])*2);
+    }else {textSize(Integer.parseInt(nums[i]));}
     text(words[i],x,y);
     //delay(500);
   //}

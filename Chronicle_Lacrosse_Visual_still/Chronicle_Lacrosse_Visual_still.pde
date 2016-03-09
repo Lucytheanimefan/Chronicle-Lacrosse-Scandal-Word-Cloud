@@ -26,11 +26,6 @@ void setup(){
     xcoord.add(x);
     ycoord.add(y);
     int col=(int) random(5);
-    //if (nums[i].equals("243")){
-    //  println(words[i]);
-    //  println(nums[i]);
-    //}
-    //fill(255);
     int count=0;
     for (int j=0;j<trigger.length;j++){
       if (words[i].toLowerCase().equals(trigger[j])){
@@ -46,11 +41,11 @@ void setup(){
         fill(palette[col]);
       }else fill(palette[4]);
     }
-    if (Integer.parseInt(nums[i])>80){
-      textSize(100);
-    }else{
+    //if (Integer.parseInt(nums[i])>80){
+    //  textSize(100);
+    //}else{
     textSize(Integer.parseInt(nums[i]));
-    }
+    //}
     text(words[i],x,y);}
 }
 
