@@ -36,10 +36,10 @@ void draw(){
     //if (Integer.parseInt(nums[i])>80 || count!=0 ){
     //  textSize(100);
     //}else{
-     if (Integer.parseInt(nums[i])>100 || count!=0 ){
+     if (int(nums[i])>100 || count!=0 ){
       textSize(50);
     }
-    else {textSize(Integer.parseInt(nums[i]));}
+    else {textSize(int(nums[i]));}
     text(words[i],x,y);
     //delay(500);
   //}

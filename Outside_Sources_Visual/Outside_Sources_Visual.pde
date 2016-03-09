@@ -37,12 +37,12 @@ void draw(){
         fill(palette[col]);
       }else fill(palette[4]);
     
-    if (Integer.parseInt(nums[i])>100 || count!=0 ){
+    if (int(nums[i])>100 || count!=0 ){
       textSize(50);
     }
-    else if (Integer.parseInt(nums[i])<40){
-      textSize(Integer.parseInt(nums[i])*2);
-    }else {textSize(Integer.parseInt(nums[i]));}
+    else if (int(nums[i])<40){
+      textSize(int(nums[i])*2);
+    }else {textSize(int(nums[i]));}
     text(words[i],x,y);
     //delay(500);
   //}
