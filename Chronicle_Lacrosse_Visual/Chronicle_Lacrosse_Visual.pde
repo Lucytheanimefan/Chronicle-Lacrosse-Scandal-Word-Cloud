@@ -13,8 +13,8 @@ void setup(){
 }
 
 void draw(){
-  String words[]=loadStrings("LacrosseWordFrequencyWords.txt");
-  String nums[]=loadStrings("LacrosseWordFrequencyNums.txt");
+  String words[]=loadStrings("filteredWords.txt");
+  String nums[]=loadStrings("filteredNums.txt");
   //for (int i=0;i<words.length;i++){
     x=(int)random(100,800);
     y=(int)random(50,700);
